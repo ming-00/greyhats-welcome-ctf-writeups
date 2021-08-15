@@ -1,17 +1,16 @@
-# Fries (crypto)
+# Fries [Cryptography]
 
-## Statement: 
+## Prompt 
 Sometimes we call it chips too!
 
 [fries.txt](./files/fries.txt)  
 [fries.py](./files/fries.py)  
 [encrypted_flag](./files/encrypted_flag)
 
-## Solution: 
+## Description
 From the list of scrambled words in fries.txt, it seemed most likely to be a substitution cipher. Feeding the text into a [cipher substitution tool](https://gitlab.com/guballa/SubstitutionBreaker), we get a mapping which we can subsequently use to decode the flag: 
 
-[defry.py](./files/defry.py)
-````
+```` python
 import hashlib
 
 MAPPING = {"a": "a",
@@ -44,8 +43,6 @@ MAPPING = {"a": "a",
 FLAG_CODE = open('encrypted_flag', 'rb').read()
 
 # decrypt based on mapping
-
-
 def decrypt(word):
     new_word = ""
     for letter in word:
@@ -54,8 +51,6 @@ def decrypt(word):
 
 # OTP xor symmetric encryption
 # decrypt function same as encrypt function
-
-
 def encryptFlag(msg, shared_secret):
     sha512 = hashlib.sha512()
     sha512.update(str(shared_secret).encode('ascii'))
@@ -63,11 +58,8 @@ def encryptFlag(msg, shared_secret):
     return bytes([i[0] ^ i[1] for i in zip(key, msg)])
 
 # reverse encrypt due to symmetry
-
-
 def decryptFlag(msg, shared_secret):
     return encryptFlag(msg, shared_secret)
-
 
 # driver code
 if __name__ == "__main__":
@@ -90,5 +82,7 @@ if __name__ == "__main__":
     print("CODE COMPLETED")
     exit(0)
 ````
+[defry.py](./files/defry.py)
 
-greyhats{M@yb3_y0u_c@n_7rY_5paN15h}
+## Flag
+`greyhats{M@yb3_y0u_c@n_7rY_5paN15h}`

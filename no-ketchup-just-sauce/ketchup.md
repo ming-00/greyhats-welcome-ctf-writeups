@@ -1,9 +1,9 @@
-# No ketchup, just sauce (web)
+# No ketchup, just Sauce [Web]
 
-## Statement: 
+## Prompt 
 Building my ketchup startup at http://challs1.nusgreyhats.org:5208/
 
-## Solution: 
+## Description
 Visiting the provided link lead us to the following web page without any interesting leads. 
 
 ![image of web page](./screenshots/home-page.png)
@@ -22,7 +22,7 @@ Checking the HTML source file, we see a comment conveniently left by the creator
 
 We took this as a hint to check for backup files and tested out a few common backup file extensions. We got lucky trying out the .bak extension, which provided us with a downloaded file containing the following: 
 
-````
+```` html
 <html>
 
 <head>
@@ -66,4 +66,5 @@ We took this as a hint to check for backup files and tested out a few common bac
 
 Trying "no ketchup, raw sauce -- too many calories, not good" against the security question worked and we obtained the flag.
 
-greyhats{n0_k3tchup_r4w_s4uc3_892e89h89e}
+## Flag
+`greyhats{n0_k3tchup_r4w_s4uc3_892e89h89e}`
