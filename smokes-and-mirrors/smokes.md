@@ -4,7 +4,8 @@
 ![Image of prompt](./screenshots/smokes-and-mirrors-prompt.png)
 
 ## Description
-The image provided hides the file using [LSB-Stenography](https://youtu.be/TWEXCYQKyDc) and the bits of the file are spread in a row-major order.
+The image provided hides the file using [LSB-Stenography](https://youtu.be/TWEXCYQKyDc) and the bits of the file are spread in a row-major order. 
+Before proceeding, please note that the pokemon letter symbols in the image is a red herring.
 
 ![Image to decode](./files/image.png)
 [image.png](./files/image.png)
