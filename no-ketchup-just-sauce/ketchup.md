@@ -1,7 +1,9 @@
 # No ketchup, just Sauce [Web]
 
 ## Prompt 
-Building my ketchup startup at http://challs1.nusgreyhats.org:5208/
+Building my ketchup startup at `http://challs1.nusgreyhats.org:5208/`
+
+![Image of prompt](./screenshots/ketchup-prompt.png)
 
 ## Description
 Visiting the provided link lead us to the following web page without any interesting leads. 

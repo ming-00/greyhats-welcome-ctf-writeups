@@ -1,6 +1,12 @@
 # Smokes and Mirrors [Miscellaneous]
 
 ## Prompt
+A binary file - flag - has been hidden in image.png via LSB-Steganography! It is known that flag is 11,392 bytes large. Also, the file is spread across the first N pixels of the image when traversing in row-major order.
+
+Can you recover the executable and uncover the flag?
+
+[image.png](./files/image.png)
+
 ![Image of prompt](./screenshots/smokes-and-mirrors-prompt.png)
 
 ## Description

@@ -7,6 +7,8 @@ Sometimes we call it chips too!
 [fries.py](./files/fries.py)  
 [encrypted_flag](./files/encrypted_flag)
 
+![Image of prompt](./screenshots/fries-prompt.png)
+
 ## Description
 From the list of scrambled words in fries.txt, it seemed most likely to be a substitution cipher. Feeding the text into a [cipher substitution tool](https://gitlab.com/guballa/SubstitutionBreaker), we get a mapping which we can subsequently use to decode the flag: 
 

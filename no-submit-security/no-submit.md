@@ -1,6 +1,10 @@
 # No Submit Security [Web]
 
 ## Prompt
+I heard that my website is leaking some secret when a button is clicked, so I removed that button. I think it should be secure enough now.
+
+`http://challs1.nusgreyhats.org:5217/`
+
 ![Image of prompt](./screenshots/no-submit-security-prompt.png)
 
 ## Description

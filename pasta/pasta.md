@@ -1,6 +1,11 @@
 # Pasta [Cryptography]
 
 ## Prompt
+Found this message beside my pasta in rome. Wonder what it means...
+
+`terlungf{J3YP0Z3_G0_PELCG0TE4CUL}`
+- mechfrog88
+
 ![Image of prompt](./screenshots/pasta-prompt.png)
 
 ## Description

@@ -1,13 +1,16 @@
 # Strings [Miscellaneous]
 
 ## Prompt
+What is a string?
+
+[greycat.jpg](./files/greycat.jpg)
+
 ![Image of prompt](./screenshots/strings-prompt.png)
 
 ## Description
 Reading the prompt, we suspect that there is a string fed into the image either as text or as part of the image (due to the discolouration at the bottom).
 
 ![Cat image](./files/greycat.jpg)
-[greycat.jpg](./files/greycat.jpg)
 
 Hence, we try and load the image with an [online tool](https://29a.ch/photo-forensics/#forensic-magnifier) in order to see what can be extracted from the image.
 
