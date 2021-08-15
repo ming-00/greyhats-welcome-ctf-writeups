@@ -66,7 +66,13 @@ We took this as a hint to check for backup files and tested out a few common bac
 </html>
 ````
 
-Trying "no ketchup, raw sauce -- too many calories, not good" against the security question worked and we obtained the flag.
+The main line of focus will be the following:
+``` php
+if (strcmp($ketchup, 'no ketchup, raw sauce -- too many calories, not good') == 0) {
+	echo '<h1>You got it. But nothing to see here for now.</h1>';
+```
+
+Trying `"no ketchup, raw sauce -- too many calories, not good"` against the security question worked and we obtained the flag.
 
 ## Flag
 `greyhats{n0_k3tchup_r4w_s4uc3_892e89h89e}`

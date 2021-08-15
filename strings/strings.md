@@ -13,17 +13,17 @@ Reading the prompt, we suspect that there is a string fed into the image either 
 
 ![Cat image](./files/greycat.jpg)
 
-Hence, we try and load the image with an [online tool](https://29a.ch/photo-forensics/#forensic-magnifier) in order to see what can be extracted from the image.
-
-![Analysis page](./screenshots/strings-analysis.png)
-
-After exploring with some of the tools present, the flag was found when inspecting the `String Extraction` tab and a simple `CTRL/CMD-F` to search with the keyword `greyhats`.
-
-![String Extraction](./screenshots/strings-extractor.png)
+We also noticed from the name of the challenge that we might be able to use the `string` command to help filter out strings in a file.
 
 And we have our flag!
 
-![String Extraction](./screenshots/strings-flag.png)
+``` bash
+$ strings greycat.jpg | grep greyhats
+qgreyhats{W4y2_T0_H1De_1nf0rm4t10N}
+
+$ strings greycat.jpg | grep greyhats | cut -c 2- # trim random 'q' in strings
+greyhats{W4y2_T0_H1De_1nf0rm4t10N}
+```
 
 ## Flag
 `greyhats{W4y2_T0_H1De_1nf0rm4t10N}`
