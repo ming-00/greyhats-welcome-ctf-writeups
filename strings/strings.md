@@ -3,9 +3,10 @@
 ## Prompt
 What is a string?
 
-[greycat.jpg](./files/greycat.jpg)
-
 ![Image of prompt](./screenshots/strings-prompt.png)
+
+## Files
+[greycat.jpg](./files/greycat.jpg)
 
 ## Description
 Reading the prompt, we suspect that there is a string fed into the image either as text or as part of the image (due to the discolouration at the bottom).

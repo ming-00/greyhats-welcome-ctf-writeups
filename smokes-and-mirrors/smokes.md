@@ -5,16 +5,16 @@ A binary file - flag - has been hidden in image.png via LSB-Steganography! It is
 
 Can you recover the executable and uncover the flag?
 
-[image.png](./files/image.png)
-
 ![Image of prompt](./screenshots/smokes-and-mirrors-prompt.png)
+
+## Files
+[image.png](./files/image.png)
 
 ## Description
 The image provided hides the file using [LSB-Stenography](https://youtu.be/TWEXCYQKyDc) and the bits of the file are spread in a row-major order. 
 Before proceeding, please note that the pokemon letter symbols in the image is a red herring.
 
 ![Image to decode](./files/image.png)
-[image.png](./files/image.png)
 
 Following the prompt, we have to extract the binary file from the image provided. For this we use [zsteg](https://github.com/zed-0xff/zsteg) to try and see if we can grab the binary file.
 
