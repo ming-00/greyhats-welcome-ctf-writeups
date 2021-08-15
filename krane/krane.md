@@ -19,7 +19,7 @@ Before carrying on we extracted the possible code/scripts and examine them. We e
 
 ![files loaded in DOM](./screenshots/krane-files.png)
 
-We saw a couple of JavaScript files and also this web assembly file (`.wasm`). The `index.js` and `main.js` calls onto the wasm file to determine if the input combination was correct. We googled online and saw that there is a decompiler to C code.
+We saw a couple of JavaScript files and also this web assembly file (`.wasm`). The `index.js` and `main.js` calls onto the wasm file to determine if the input combination was correct. We [googled online](https://github.com/wwwg/wasmdec) and saw that there is a decompiler to C code.
 
 ``` js
 // extracted from index.js
