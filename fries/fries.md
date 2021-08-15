@@ -3,14 +3,14 @@
 ## Statement: 
 Sometimes we call it chips too!
 
-[fries.txt](./fries.txt)  
-[fries.py](./fries.py)  
-[encrypted_flag](./encrypted_flag)
+[fries.txt](./files/fries.txt)  
+[fries.py](./files/fries.py)  
+[encrypted_flag](./files/encrypted_flag)
 
 ## Solution: 
 From the list of scrambled words in fries.txt, it seemed most likely to be a substitution cipher. Feeding the text into a [cipher substitution tool](https://gitlab.com/guballa/SubstitutionBreaker), we get a mapping which we can subsequently use to decode the flag: 
 
-[defry.py](./defry.py)
+[defry.py](./files/defry.py)
 ````
 import hashlib
 

@@ -6,7 +6,7 @@ Building my ketchup startup at http://challs1.nusgreyhats.org:5208/
 ## Solution: 
 Visiting the provided link lead us to the following web page without any interesting leads. 
 
-![image of web page](./home-page.png)
+![image of web page](./screenshots/home-page.png)
 
 Checking the robots.txt file, we find the first hint: 
 `User-agent: *
@@ -14,7 +14,7 @@ Disallow: /reborn.php`
 
 Navigating to the `/reborn.php` endpoint we find the following security question: 
 
-![image of security question](./security-question.png)
+![image of security question](./screenshots/security-question.png)
 
 Checking the HTML source file, we see a comment conveniently left by the creator:
 
