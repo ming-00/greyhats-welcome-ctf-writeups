@@ -133,7 +133,7 @@ r.interactive()
 Running the python script, we get our flag!
 
 ``` bash
-$ python3 open_door.py 
+$ python3 open-door.py 
 [+] Opening connection to challs1.nusgreyhats.org on port 5301: Done
 [*] Paused (press any to continue)
 [*] Switching to interactive mode
