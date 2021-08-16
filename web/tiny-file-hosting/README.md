@@ -8,7 +8,7 @@ People like large file hosting service, but I created a tiny file hosting servic
 ![Image of prompt](./screenshots/file-hosting-prompt.png)
 
 ## Files
-[setup.sh](./files/setup.sh)
+[setup.sh](./files/setup.sh)  
 [setup-cron](./files/setup-cron)
 
 ## Description
