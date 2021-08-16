@@ -83,10 +83,13 @@ Also, notice the comment:
 Checking the provided `setup-cron` and `setup.sh`, we can see that the files that managed to get uploaded to the specified directory will be wiped every 3 minutes. What's more interesting is that the `$flag` alias variable is echoed to a new randomly named `.txt` file in the same upload directory.
 
 ``` bash
-### -- setup-cron --
+# -- setup-cron --
 */3 * * * * root /bin/bash /root/setup.sh
+```
 
-### --- setup.sh ---
+``` bash
+#--- setup.sh ---
+
 #!/bin/bash
 . /root/.bashrc
 rm /var/www/html/upload/*

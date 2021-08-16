@@ -32,7 +32,7 @@ b1,r,lsb,xy         .. file: ELF 64-bit LSB shared object, x86-64, version 1 (SY
 We then proceed to extract it with the `-E` flag with the right analysis details to grab the binary file.
 
 ``` bash
-$ zsteg image.png -e b1,r,lsb,xy > extracted
+$ zsteg image.png -E b1,r,lsb,xy > extracted
 
 $ ls
 extracted  image.png  zsteg-master

